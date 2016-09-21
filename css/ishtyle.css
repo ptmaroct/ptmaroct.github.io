@@ -49,6 +49,14 @@
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
 	}
+
+	@media (max-width: 768px) {
+		.navbar-brand {
+			transform: translateX(-50%);
+			left: 50%;
+			position: absolute;
+		}
+	}
 	.pics {
 		margin: 10px;
 		height: 230px;
