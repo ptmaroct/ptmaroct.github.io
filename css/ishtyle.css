@@ -8,7 +8,10 @@
 	    border-radius: 0;
 	    opacity: 0.9;
 	}
-
+	
+	.navbar:hover {
+		opacity: 1;
+	}
 	.navbar li a, .navbar .navbar-brand {
 	    color: #fff !important;
 	}
@@ -80,4 +83,74 @@
 	.pics {
 		margin: 10px;
 		height: 230px;
+	}
+
+	#content {
+		background-color: white;
+		margin-top: 100px;
+		margin-bottom: 50px;
+	}
+
+	.eventtitle {
+		border-radius: 0;
+		padding: 0;
+	}
+
+	.card {
+	  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	}
+	.card:hover {
+	  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	}   
+
+	.card {
+	  margin-top: 10px;
+	  box-sizing: border-box;
+	  border-radius: 2px;
+	  background-clip: padding-box;
+	  background-color: white;
+	}
+
+	.card-header {
+	padding: 2px 16px;
+	background-color: #175888;
+	color: white;
+	text-align: center;
+	}
+
+	.card span.card-title {
+	    color: #fff;
+	    font-size: 15px;
+	    font-weight: 300;
+	    text-transform: uppercase;
+	}
+
+	.card .card-image {
+	  position: relative;
+	  overflow: hidden;
+	}
+	.card .card-image img {
+	  border-radius: 2px 2px 0 0;
+	  background-clip: padding-box;
+	  position: relative;
+	  z-index: -1;
+	}
+	.card .card-image span.card-title {
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  padding: 16px;
+	}
+	.card .card-content {
+	  padding: 16px;
+	  border-radius: 0 0 2px 2px;
+	  background-clip: padding-box;
+	  box-sizing: border-box;
+	}
+	.card .card-content p {
+	  margin: 0;
+	  color: inherit;
+	}
+	.card .card-content span.card-title {
+	  line-height: 48px;
 	}
