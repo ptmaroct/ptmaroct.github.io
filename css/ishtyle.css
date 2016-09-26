@@ -31,25 +31,29 @@
 
     footer {
       background-color: #f2f2f2;
-      padding: 25px;
-      border-top: 5px dashed; 
+      padding: 7px;
+      border-top: 2px dashed; 
     }
 
     body {
-    	background-color: #f2f2f2;
+    	background-color: #000;
     }
 	
 	#slider {
+	 
 		margin-top: 100px;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 
-	#upcoming {
+	#upcoming {border-radius: 25px;
 		background-color: #daeeff;
+		margin-bottom: 30px;
 	}
+	
 
-	#recent {
-		background-color: #f0f8ff;
+	#recent {border-radius: 25px;
+		background-color: #daeeff;
+		margin-bottom: 50px;
 	}
     .carousel-inner img {
     width: 100%; /* Set width to 100% */
