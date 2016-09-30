@@ -47,15 +47,10 @@
 		margin-top: 100px;
 		margin-bottom: 30px;
 	}
-
-	#upcoming {border-radius: 25px;
-		background-color: #daeeff;
-		margin-bottom: 30px;
-	}
 	
-
-	#recent {border-radius: 25px;
+	#section {
 		background-color: #daeeff;
+		border-radius: 25px;
 		margin-bottom: 50px;
 	}
     .carousel-inner img {
