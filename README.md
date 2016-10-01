@@ -6,4 +6,4 @@ Please note, the site is currently in alpha stage. The content is not final and 
 The site is developed using Bootstrap framework version 3.3.6 and uses 3rd party plugins, namely Slick Slider (on index page) and Ekko Lightbox (on members page)
 
 Designed and Developed by:
-** Anuj Sharma ** [Website](http://anujsh.com) and ** Satish Padnani ** [Website](http://satishpadnani.com)
+**Anuj Sharma** ([Website](http://anujsh.com)) and **Satish Padnani** ([Website](http://satishpadnani.com))
