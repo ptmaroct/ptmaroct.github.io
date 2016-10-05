@@ -7,6 +7,25 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/ishtyle.css">
   <link rel="stylesheet" type="text/css" href="css/fotorama.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/fotorama.js"></script>
+  <script>
+  	 $(document).ready(function(){
+  	  $('.slick-slider').slick({
+  	      dots: false,
+  	      infinite: true,
+  	      speed: 900,
+  	      slidesToShow: 1,
+  	      centerMode: true,
+  	      autoplay: true,
+  	      autoplaySpeed: 500,
+  	      variableWidth: true,
+  	      arrows: false
+  	  });
+  		});
+  </script>
 </head>
 <body>
 
@@ -32,10 +51,9 @@
     </div>
   </div>
 </nav>
-
 <div class="container">
 	<div class="row">
-<center>		<div  id="slider"> <!-- add classes col-md-6 and col-md-offset-3 to center it and make it take half space -->
+			<center>		<div  id="slider"> <!-- add classes col-md-6 and col-md-offset-3 to center it and make it take half space -->
 			<div class="fotorama" data-max-width="70%"  data-autoplay="true" data-keyboard="true" data-loop="true" data-nav="false">
 			  <!-- <img src="images/banner1.jpg">
 			  <img src="images/banner2.jpg">
@@ -101,31 +119,126 @@
 		<div class="row">
 			<div class="col-md-4"><h3><a href="http://facebook.com/technoblitzkec" target="_blank">Techno-Blitz Society </a></h3></div>
 			<div class="col-md-4"><h3>© Krishna Engineering College</h4></div>
-			<div class="col-md-4"><h3><small>Designed & Developed by <a href="http://facebook.com/ItsAnujHere" target="_blank">Anuj Sharma</a> & <a href="http://instagram.com/dillisehun" target="_blank">Satish Padnani</a></small></h3>
-</div>
+			<div class="col-md-4"><h3><small>Designed & Developed by <a href="http://facebook.com/ItsAnujHere" target="_blank">Anuj Sharma</a> &amp; <a href="http://instagram.com/dillisehun" target="_blank">Satish Padnani</a></small></h3></div>
 		</div>
 	</div>
 </footer>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/fotorama.js"></script>
-<script>
-	 $(document).ready(function(){
-	  $('.slick-slider').slick({
-	      dots: false,
-	      infinite: true,
-	      speed: 900,
-	      slidesToShow: 1,
-	      centerMode: true,
-	      autoplay: true,
-	      autoplaySpeed: 500,
-	      variableWidth: true,
-	      arrows: false
-	  });
+<script src="js/particles.min.js"></script>
+<script type="text/javascript">
+	/* ---- particles.js config ---- */
+
+	particlesJS("particles-js", {
+	  "particles": {
+	    "number": {
+	      "value": 380,
+	      "density": {
+	        "enable": true,
+	        "value_area": 800
+	      }
+	    },
+	    "color": {
+	      "value": "#ffffff"
+	    },
+	    "shape": {
+	      "type": "circle",
+	      "stroke": {
+	        "width": 0,
+	        "color": "#000000"
+	      },
+	      "polygon": {
+	        "nb_sides": 5
+	      },
+	      "image": {
+	        "src": "img/github.svg",
+	        "width": 100,
+	        "height": 100
+	      }
+	    },
+	    "opacity": {
+	      "value": 0.5,
+	      "random": false,
+	      "anim": {
+	        "enable": false,
+	        "speed": 1,
+	        "opacity_min": 0.1,
+	        "sync": false
+	      }
+	    },
+	    "size": {
+	      "value": 3,
+	      "random": true,
+	      "anim": {
+	        "enable": false,
+	        "speed": 40,
+	        "size_min": 0.1,
+	        "sync": false
+	      }
+	    },
+	    "line_linked": {
+	      "enable": true,
+	      "distance": 150,
+	      "color": "#ffffff",
+	      "opacity": 0.4,
+	      "width": 1
+	    },
+	    "move": {
+	      "enable": true,
+	      "speed": 6,
+	      "direction": "none",
+	      "random": false,
+	      "straight": false,
+	      "out_mode": "out",
+	      "bounce": false,
+	      "attract": {
+	        "enable": false,
+	        "rotateX": 600,
+	        "rotateY": 1200
+	      }
+	    }
+	  },
+	  "interactivity": {
+	    "detect_on": "canvas",
+	    "events": {
+	      "onhover": {
+	        "enable": true,
+	        "mode": "grab"
+	      },
+	      "onclick": {
+	        "enable": true,
+	        "mode": "push"
+	      },
+	      "resize": true
+	    },
+	    "modes": {
+	      "grab": {
+	        "distance": 140,
+	        "line_linked": {
+	          "opacity": 1
+	        }
+	      },
+	      "bubble": {
+	        "distance": 400,
+	        "size": 40,
+	        "duration": 2,
+	        "opacity": 8,
+	        "speed": 3
+	      },
+	      "repulse": {
+	        "distance": 200,
+	        "duration": 0.4
+	      },
+	      "push": {
+	        "particles_nb": 4
+	      },
+	      "remove": {
+	        "particles_nb": 2
+	      }
+	    }
+	  },
+	  "retina_detect": true
 	});
 </script>
-
 </body>
 </html>

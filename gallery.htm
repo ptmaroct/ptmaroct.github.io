@@ -6,12 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/ishtyle.css">
-  <link rel="stylesheet" type="text/css" href="css/fotorama.css">
+  <link href="css/dark.css" rel="stylesheet">
+  <link href="css/ekko-lightbox.min.css" rel="stylesheet">
+  <style type="text/css">
+    div.ekko-lightbox > div.modal-dialog{margin-left:auto; margin-right:auto;}
+    h4.modal-title{text-align:center;}
+  </style>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ekko-lightbox.min.js"></script>
+  <!-- Script that handles launch trigger -->
+  <script type="text/javascript">
+      $(document).ready(function ($) {
+        $("#cl").click(function(){
+          $("#navbar").removeClass("navbar-fixed-top");
+        });
+        // delegate calls to data-toggle="lightbox"
+        $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+            onShown: function() {
+              if (window.console) {
+                return console.log('onShown event fired');
+              }
+            },
+            onContentLoaded: function() {
+              if (window.console) {
+                return console.log('onContentLoaded event fired');
+              }
+            },
+            onNavigate: function(direction, itemIndex) {
+              if (window.console) {
+                return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+              }
+            }
+          });
+        });
+        $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+            onShown: function() {
+              var lb = this;
+              $(lb.modal_content).on('click', '.modal-footer a#jumpit', function(e) {
+                e.preventDefault();
+                lb.navigateTo(2);
+              });
+              $(lb.modal_content).on('click', '.modal-footer a#closeit', function(e) {
+                e.preventDefault();
+                lb.close();
+              });
+            }
+          });
+        });
+
+      });
+    </script>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -34,13 +88,43 @@
 </nav>
 
 <div class="container" id="content">
-	<h1>Events</h1>
+	<h1>Gallery</h1>
 	<blockquote>
-		The Technoblitz society has conducted a number of events, technical as we well as non-technical. We intend to continue this tradition. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius maiores quod praesentium, officia, aut eos impedit quos quidem sunt nostrum.
+		You will find here the memories of all the events that have been conducted by TechnoBlitz society. So, if you particpated in any of our event then watch this space. Who knows your happy face may show up. :)
 	</blockquote>
-	
-	<h2><i>Events conducted so far</i></h2><br>
+	<h2 class="well well-sm"><i>Present Year Events</i></h2>
 
+  <h3 id="bsw">Bootstrap Framework Workshop</h3>  
+  <div class="row">
+    <div class="col-md-4">
+      <a href="events/img3d.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Bootstrap">
+    <img src="events/img3d.jpg" class="img-rounded pics"></a>
+    </div>
+    <div class="col-md-4">
+      <a href="events/img4d.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Bootstrap">
+    <img src="events/img4d.jpg" class="img-rounded pics"></a>
+    </div>
+    <div class="col-md-4">
+      <a href="events/img4d.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Bootstrap">
+    <img src="events/img4d.jpg" class="img-rounded pics"></a>
+    </div>
+  </div>
+
+  <h3 id="htmlw">HTML Workshop Workshop</h3>  
+  <div class="row">
+    <div class="col-md-4">
+      <a href="events/img3d.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Bootstrap">
+    <img src="events/img3d.jpg" class="img-rounded pics"></a>
+    </div>
+    <div class="col-md-4">
+      <a href="events/img4d.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Bootstrap">
+    <img src="events/img4d.jpg" class="img-rounded pics"></a>
+    </div>
+    <div class="col-md-4">
+      <a href="events/img4d.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Bootstrap">
+    <img src="events/img4d.jpg" class="img-rounded pics"></a>
+    </div>
+  </div>
 	
 	</div>
 	
@@ -57,10 +141,5 @@
 		</div>
 	</div>
 </footer>
-
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
 </body>
 </html>
