@@ -53,21 +53,6 @@
 		border-radius: 25px;
 		margin-bottom: 50px;
 	}
-    .carousel-inner img {
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-	}
-
-	.carousel-caption h3 {
-    color: #fff !important;
-	}
-
-	@media (max-width: 600px) {
-    .carousel-caption {
-        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-	}
-
 	@media (max-width: 768px) {
 		.navbar-brand {
 			transform: translateX(-50%);
@@ -149,4 +134,8 @@
 	}
 	.card .card-content span.card-title {
 	  line-height: 48px;
+	}
+
+	h2,h1,h3,h4 {
+		font-family: 'Roboto Condensed';
 	}
