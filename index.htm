@@ -20,12 +20,31 @@
 
   </style>
   <script src="js/jquery.min.js"></script>
+  <script src="js/vticker.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/fotorama.js"></script>
+  <script src="js/jquery.easy-ticker.min.js"></script>
   <script>
-  	//Slider configuration
+  	//Past Events Slider configuration
   	 $(document).ready(function(){
-  	 	
+  	 	$('.vticker').easyTicker({
+  	 		direction: 'up',
+  	 		easing: 'swing',
+  	 		speed: 'slow',
+  	 		interval: 2000,
+  	 		height: 'auto',
+  	 		width: 'auto',
+  	 		visible: 5, //Number of list items to show at a time
+  	 		mousePause: 1,
+  	 		controls: {
+  	 			up: '',
+  	 			down: '',
+  	 			toggle: '',
+  	 			playText: 'Play',
+  	 			stopText: 'Stop'
+  	 		}
+  	 	});
+
   	  $('.slick-slider').slick({
   	      dots: false,
   	      infinite: true,
@@ -70,7 +89,7 @@
 	<div class="row">
 			
 		<div class="col-md-8">
-		<div> <!-- add classes col-md-6 and col-md-offset-3 to center it and make it take half space -->
+		<div>
 				<div class="fotorama" data-max-width="100%"   data-autoplay="true" data-keyboard="true" data-loop="true" data-nav="false">
 				  <img src="events/bootstrap.jpg">
 				  <img src="images/slider/1.jpg">
@@ -82,17 +101,30 @@
 		</div>
 
 		<div class="col-md-4">
-			<h2 class="text-center white">Past Events</h2>
-			<ul class="list-group">
-			
-			<li class="list-group-item active">Want to be Part of Society?Here is your only chance to be part of the Most Amazing Society of College</li>
-			<li class="list-group-item">You Must be of 2nd Year &amp; CS / IT Branch.</li>
-			<li class="list-group-item">There Will Be 3 to 4 rounds. </li>
-			<li class="list-group-item">There are rules and laws for the members in society So, Be Serious. </li>
-			<li class="list-group-item">There are rules and laws for the members in society So, Be Serious. </li>
-			
-			
-			</ul>
+		<div class="panel panel-primary">
+		  <div class="panel-heading"><h2>Past Events</h2></div>
+		  <div class="panel-body">
+			<div class="vticker" >
+				<ul class="list-group">
+					<li class="list-group-item"><h4>Bootstrap Framework Workshop</h4></li>
+	
+					<li class="list-group-item"><h4>HTML Workshop</h4></li>
+					<li class="list-group-item"><h4>KEC Roadies</h4></li>
+					<li class="list-group-item"><h4>TechnoBlitz Interview </h4></li>
+					<li class="list-group-item"><h4>C Gambling</h4></li>
+					<li class="list-group-item"><h4>Java Basics Workshop</h4></li>
+					<li class="list-group-item"><h4>HTML And CSS Workshop</h4></li>
+					<li class="list-group-item"><h4>Blind Coding</h4></li>
+					<li class="list-group-item"><h4>Know Your KEC</h4></li>
+					<li class="list-group-item"><h4>Database and SQL Workshop</h4></li>
+					<li class="list-group-item"><h4>KEC Roadies</h4></li>
+					<li class="list-group-item"><h4>HTML & CSS Workshop Prize Distribution</h4></li>
+					<li class="list-group-item"><h4>HTML & CSS Workshop</h4></li>
+					<li class="list-group-item"><h4>Skit Competition</h4></li>
+				</ul>
+			</div>
+		  </div>
+		</div>			
 		</div>
 	</div>
 </div>
