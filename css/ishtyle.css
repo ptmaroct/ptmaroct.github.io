@@ -59,6 +59,10 @@
 			left: 50%;
 			position: absolute;
 		}
+
+		#past_events {
+			margin-top: 20px;
+		}
 	}
 	.pics {
 		margin: 10px;
