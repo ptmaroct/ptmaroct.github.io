@@ -18,6 +18,25 @@
   		color: white;
   	}
 
+  	.modal {
+  	  text-align: center;
+  	  padding: 0!important;
+  	}
+
+  	.modal:before {
+  	  content: '';
+  	  display: inline-block;
+  	  height: 100%;
+  	  vertical-align: middle;
+  	  margin-right: -4px;
+  	}
+
+  	.modal-dialog {
+  	  display: inline-block;
+  	  text-align: left;
+  	  vertical-align: middle;
+  	}
+
   </style>
   <script src="js/jquery.min.js"></script>
   <script src="js/vticker.js"></script>
@@ -27,6 +46,12 @@
   <script>
   	//Past Events Slider configuration
   	 $(document).ready(function(){
+
+  	 	function modalShow() {
+  	 		$('#modal-id').modal('show');
+  	 	}
+  	 	setTimeout(modalShow, 5000);
+
   	 	$('.vticker').easyTicker({
   	 		direction: 'up',
   	 		easing: 'swing',
@@ -163,7 +188,7 @@
 						</ul>	
 					</div>
 					
-					<button class="btn btn-danger  btn-block">Register</button>
+					<button class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-id">Register</button>
 					<br>
 				</div>	
 
@@ -193,7 +218,7 @@
 <!-- Second Container Fluid-->
 <!-- For Something IDK but page was so empty-->
 <div class="container-fluid">
-	<div class="container text-center" id="section">
+	<div class="container " id="section">
 		<div class="row">
 			<!-- Upcoming -->
 
@@ -207,34 +232,56 @@
 						<a href="#" class="list-group-item"> 
 						<h4 class="list-group-item-heading">List group item heading</h4> 
 						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a> 
+
+						<a href="#" class="list-group-item"> 
+						<h4 class="list-group-item-heading">List group item heading</h4> 
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
 					</div>
 				</div>	
 
-				<!-- Registration -->
+				<!-- Facebook Page Embed -->
+				<div class="col-md-4">
+					<h2>Follow us on Facebook</h2>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechnoblitzkec&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>
 
 				<div class="col-md-4">
-					<h2>Register for Society Auditions</h2>
-					
-					<div class="row">  
-						<ul class="list-group">
-						
-						<li class="list-group-item active">Want to be Part of Society?Here is your only chance to be part of the Most Amazing Society of College</li>
-						<li class="list-group-item">You Must be of 2nd Year &amp; CS / IT Branch.</li>
-						<li class="list-group-item">There Will Be 3 to 4 rounds. </li>
-						<li class="list-group-item">There are rules and laws for the members in society So, Be Serious. </li>
-						</ul>	
-					</div>
-					
-					<button class="btn btn-danger  btn-block">Register</button>
-					<br>
-				</div>	
+				<h2>Upcoming Events</h2>
+					<div class="list-group"> 
+						<a href="#" class="list-group-item active"> 
+						<h4 class="list-group-item-heading">Society Auditions</h4> 
+						<p class="list-group-item-text">Wanna be a part of our society? Register yourself and prove yourself to us in the auditions!</p> </a> 
 
+						<a href="#" class="list-group-item"> 
+						<h4 class="list-group-item-heading">List group item heading</h4> 
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a> 
+
+						<a href="#" class="list-group-item"> 
+						<h4 class="list-group-item-heading">List group item heading</h4> 
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
+					</div>
+				</div>
+			
 		</div>
 	</div>
 </div>
 
-
-
+<div class="modal fade" id="modal-id">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Register for TechnoBlitz Interview</h4>
+			</div>
+			<div class="modal-body">
+				<h3>Information and stuff goes here</h3>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 <!-- Footer -->
 <footer class="container-fluid text-center">
