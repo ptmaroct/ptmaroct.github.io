@@ -44,14 +44,23 @@
   <script src="js/fotorama.js"></script>
   <script src="js/jquery.easy-ticker.min.js"></script>
   <script>
-  	//Past Events Slider configuration
-  	 $(document).ready(function(){
+  
+  	 	$(document).ready(function(){
+	 		$('#modal-id').on('hidden.bs.modal', function () {
+	 	    $('#tbnav').addClass('navbar-fixed-top'); //show back navbar on modal close
+  	 	});
 
-  	 	function modalShow() {
+  	 	function modalShow() { //function to show modal
+  	 		$('#tbnav').removeClass('navbar-fixed-top'); //Hide navbar when modal is open
   	 		$('#modal-id').modal('show');
   	 	}
-  	 	setTimeout(modalShow, 5000);
+  	 	setTimeout(modalShow, 5000); //Show Registration Modal after five seconds
 
+  	 	$('#modalLauncher').on('click', function(event) {
+  	 	  event.preventDefault(); // To prevent following the link (optional)
+  	 	  $('#tbnav').removeClass('navbar-fixed-top'); //Hide navbar when modal is open
+  	 	});
+  	 	//Past Events Slider configuration
   	 	$('.vticker').easyTicker({
   	 		direction: 'up',
   	 		easing: 'swing',
@@ -70,6 +79,7 @@
   	 		}
   	 	});
 
+  	 	//Homepage pe jo photo slider hai, uski setting
   	  $('.slick-slider').slick({
   	      dots: false,
   	      infinite: true,
@@ -89,7 +99,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top" id="tbnav">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -188,7 +198,8 @@
 						</ul>	
 					</div>
 					
-					<button class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-id">Register</button>
+					<button class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-id" id="modalLauncher">Register</button>
+					<!-- <a class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-id" role="button" onclick="modalShow();">Register</a> -->
 					<br>
 				</div>	
 
@@ -267,17 +278,17 @@
 </div>
 
 <div class="modal fade" id="modal-id">
-	<div class="modal-dialog">
+	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
-			<div class="modal-header">
+			<!-- <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<h4 class="modal-title">Register for TechnoBlitz Interview</h4>
-			</div>
+			</div> -->
 			<div class="modal-body">
-				<h3>Information and stuff goes here</h3>
+				<img src="images/registrations/TechnoBlitz_Auditions.jpg" class="img-responsive" alt="TechnoBlitz Auditions">
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-default closer" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
