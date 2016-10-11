@@ -9,12 +9,23 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/ishtyle.css">
   <link rel="stylesheet" type="text/css" href="css/fotorama.css">
+  <style type="text/css">
+  	#main {
+  		margin-top: 100px;
+  		margin-bottom: 30px;
+  	}
+  	.white {
+  		color: white;
+  	}
+
+  </style>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/fotorama.js"></script>
   <script>
   	//Slider configuration
   	 $(document).ready(function(){
+  	 	
   	  $('.slick-slider').slick({
   	      dots: false,
   	      infinite: true,
@@ -28,6 +39,8 @@
   	  });
   		});
   </script>
+
+ 
 </head>
 <body>
 
@@ -53,11 +66,11 @@
     </div>
   </div>
 </nav>
-<div class="container">
+<div class="container" id="main">
 	<div class="row">
 			
-		<div class="col-md-8 col-md-offset-2 col-sm-12">
-		<div id="slider"> <!-- add classes col-md-6 and col-md-offset-3 to center it and make it take half space -->
+		<div class="col-md-8">
+		<div> <!-- add classes col-md-6 and col-md-offset-3 to center it and make it take half space -->
 				<div class="fotorama" data-max-width="100%"   data-autoplay="true" data-keyboard="true" data-loop="true" data-nav="false">
 				  <img src="events/bootstrap.jpg">
 				  <img src="images/slider/1.jpg">
@@ -66,6 +79,20 @@
 				  <img src="events/roadiesevent.jpg">
 				</div> 
 		</div>
+		</div>
+
+		<div class="col-md-4">
+			<h2 class="text-center white">Past Events</h2>
+			<ul class="list-group">
+			
+			<li class="list-group-item active">Want to be Part of Society?Here is your only chance to be part of the Most Amazing Society of College</li>
+			<li class="list-group-item">You Must be of 2nd Year &amp; CS / IT Branch.</li>
+			<li class="list-group-item">There Will Be 3 to 4 rounds. </li>
+			<li class="list-group-item">There are rules and laws for the members in society So, Be Serious. </li>
+			<li class="list-group-item">There are rules and laws for the members in society So, Be Serious. </li>
+			
+			
+			</ul>
 		</div>
 	</div>
 </div>
