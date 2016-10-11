@@ -46,20 +46,20 @@
   <script>
   
   	 	$(document).ready(function(){
-	 		$('#modal-id').on('hidden.bs.modal', function () {
-	 	    $('#tbnav').addClass('navbar-fixed-top'); //show back navbar on modal close
-  	 	});
+	 		// $('#modal-id').on('hidden.bs.modal', function () {
+	 	 //    $('#tbnav').addClass('navbar-fixed-top'); //show back navbar on modal close
+  	 // 	});
 
   	 	function modalShow() { //function to show modal
-  	 		$('#tbnav').removeClass('navbar-fixed-top'); //Hide navbar when modal is open
+  	 		//$('#tbnav').removeClass('navbar-fixed-top'); //Hide navbar when modal is open
   	 		$('#modal-id').modal('show');
   	 	}
   	 	setTimeout(modalShow, 5000); //Show Registration Modal after five seconds
 
-  	 	$('#modalLauncher').on('click', function(event) {
-  	 	  event.preventDefault(); // To prevent following the link (optional)
-  	 	  $('#tbnav').removeClass('navbar-fixed-top'); //Hide navbar when modal is open
-  	 	});
+  	 	// $('#modalLauncher').on('click', function(event) {
+  	 	//   event.preventDefault(); // To prevent following the link (optional)
+  	 	//   $('#tbnav').removeClass('navbar-fixed-top'); //Hide navbar when modal is open
+  	 	// });
   	 	//Past Events Slider configuration
   	 	$('.vticker').easyTicker({
   	 		direction: 'up',
@@ -99,7 +99,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top" id="tbnav">
+<nav class="navbar navbar-inverse" id="tbnav">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
