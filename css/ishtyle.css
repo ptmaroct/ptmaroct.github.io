@@ -50,8 +50,8 @@
 	
 	.section {
 		background-color: #daeeff;
-		border-radius: 25px;
-		margin-bottom: 50px;
+/*		border-radius: 25px;
+*/		margin-bottom: 50px;
 	}
 	@media (max-width: 768px) {
 		.navbar-brand {

@@ -12,6 +12,56 @@
   <link rel="stylesheet" type="text/css" href="css/slick.css">
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <style type="text/css">
+	div.section:hover {
+		-webkit-box-shadow: 18px 15px 125px 10px rgba(51,122,183,1);
+		-moz-box-shadow: 18px 15px 125px 10px rgba(51,122,183,1);
+		box-shadow: 18px 15px 125px 10px rgba(51,122,183,1);
+	}
+
+  	.effect1{
+  		-webkit-box-shadow: 0 10px 6px -6px #777;
+  		   -moz-box-shadow: 0 10px 6px -6px #777;
+  		        box-shadow: 0 10px 6px -6px #777;
+  	}
+
+  	/*==================================================
+  	 * Effect 2
+  	 * ===============================================*/
+  	.effect2
+  	{
+  	  position: relative;
+  	}
+  	.effect2:before, .effect2:after
+  	{
+  	  z-index: -1;
+  	  position: absolute;
+  	  content: "";
+  	  bottom: 15px;
+  	  left: 10px;
+  	  width: 50%;
+  	  top: 80%;
+  	  max-width:300px;
+  	  background: #777;
+  	  -webkit-box-shadow: 0 15px 10px #777;
+  	  -moz-box-shadow: 0 15px 10px #777;
+  	  box-shadow: 0 15px 10px #777;
+  	  -webkit-transform: rotate(-3deg);
+  	  -moz-transform: rotate(-3deg);
+  	  -o-transform: rotate(-3deg);
+  	  -ms-transform: rotate(-3deg);
+  	  transform: rotate(-3deg);
+  	}
+  	.effect2:after
+  	{
+  	  -webkit-transform: rotate(3deg);
+  	  -moz-transform: rotate(3deg);
+  	  -o-transform: rotate(3deg);
+  	  -ms-transform: rotate(3deg);
+  	  transform: rotate(3deg);
+  	  right: 10px;
+  	  left: auto;
+  	}
+
   	#main {
   		margin-top: 20px;
   		margin-bottom: 30px;
@@ -97,10 +147,10 @@
   	      dots: false,
   	      infinite: true,
   	      speed: 900,
-  	      slidesToShow: 1,
+  	      slidesToShow: 2,
   	      centerMode: true,
   	      autoplay: true,
-  	      autoplaySpeed: 500,
+  	      autoplaySpeed: 1000,
   	      variableWidth: true,
   	      arrows: false
   	  });
@@ -179,6 +229,11 @@
 
 <!-- First Container, to be used for registration and other details reagrding it. -->
 <div class="container-fluid">
+	<div class="container text-center" style="background-color: #337ab7; color: white;">
+		<div class="container">
+			<h2>REGISTRATION</h2>
+		</div>
+	</div>
 	<div class="container text-center section">
 		<div class="row">
 			<!-- Upcoming -->
@@ -244,7 +299,13 @@
 
 <!-- Second Container Fluid-->
 <!-- For Something IDK but page was so empty-->
+
 <div class="container-fluid">
+<div class="container text-center" style="background-color: #337ab7; color: white;">
+	<div class="container">
+		<h2>GALLERY</h2>
+	</div>
+</div>
 	<div class="container section">
 		<div class="row text-center">
 			
@@ -289,7 +350,7 @@
 				</div> -->
 
 
-				<h2>Gallery</h2>
+				<!-- <h2>Gallery</h2> -->
 
 				<div class="slick-slider">
 					<img src="events/bootstrap.jpg" alt="Bootstrap" class="gallery">
@@ -306,6 +367,11 @@
 <!-- And here is the last container -->
 
 <div class="container-fluid">
+	<div class="container text-center" style="background-color: #337ab7; color: white;">
+		<div class="container">
+			<h2>CONTACT US</h2>
+		</div>
+	</div>
 	<div class="container section">
 		<div class="row text-center padding">
 				<div class="col-md-8">
