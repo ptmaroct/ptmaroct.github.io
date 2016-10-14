@@ -9,9 +9,11 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/ishtyle.css">
   <link rel="stylesheet" type="text/css" href="css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <style type="text/css">
   	#main {
-  		margin-top: 100px;
+  		margin-top: 20px;
   		margin-bottom: 30px;
   	}
   	.white {
@@ -37,11 +39,22 @@
   	  vertical-align: middle;
   	}
 
+  	.padding {
+  		padding-bottom: 20px;
+  	}
+
+  	.gallery {
+  		height: 350px;
+  		margin: 20px;
+  		display: inline;
+  	}
+
   </style>
   <script src="js/jquery.min.js"></script>
   <script src="js/vticker.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/fotorama.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/jquery.easy-ticker.min.js"></script>
   <script>
   
@@ -54,7 +67,7 @@
   	 		//$('#tbnav').removeClass('navbar-fixed-top'); //Hide navbar when modal is open
   	 		$('#modal-id').modal('show');
   	 	}
-  	 	setTimeout(modalShow, 5000); //Show Registration Modal after five seconds
+  	 	setTimeout(modalShow, 3000); //Show Registration Modal after three seconds
 
   	 	// $('#modalLauncher').on('click', function(event) {
   	 	//   event.preventDefault(); // To prevent following the link (optional)
@@ -127,8 +140,8 @@
 		<div>
 				<div class="fotorama" data-max-width="100%"   data-autoplay="true" data-keyboard="true" data-loop="true" data-nav="false">
 				  <img src="events/bootstrap.jpg">
-				  <img src="images/slider/1.jpg">
-				  <img src="images/slider/2.jpg">
+				  <!-- <img src="images/slider/1.jpg">
+				  <img src="images/slider/2.jpg"> -->
 				  <img src="images/grp.jpg">
 				  <img src="events/roadiesevent.jpg">
 				</div> 
@@ -164,9 +177,9 @@
 	</div>
 </div>
 
-
+<!-- First Container, to be used for registration and other details reagrding it. -->
 <div class="container-fluid">
-	<div class="container text-center" id="section">
+	<div class="container text-center section">
 		<div class="row">
 			<!-- Upcoming -->
 
@@ -232,11 +245,11 @@
 <!-- Second Container Fluid-->
 <!-- For Something IDK but page was so empty-->
 <div class="container-fluid">
-	<div class="container " id="section">
+	<div class="container section">
 		<div class="row text-center">
-			<!-- Upcoming -->
-
-				<div class="col-md-4">
+			
+		
+				<!-- <div class="col-md-4">
 				<h2>Upcoming Events</h2>
 					<div class="list-group"> 
 						<a href="#" class="list-group-item active"> 
@@ -253,7 +266,6 @@
 					</div>
 				</div>	
 
-				<!-- Facebook Page Embed -->
 				<div class="col-md-4">
 					<h2>Follow us on Facebook</h2>
 						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechnoblitzkec&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="214" style="border:none;overflow:hidden;display: block;margin: auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -274,12 +286,82 @@
 						<h4 class="list-group-item-heading">List group item heading</h4> 
 						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
 					</div>
+				</div> -->
+
+
+				<h2>Gallery</h2>
+
+				<div class="slick-slider">
+					<img src="events/bootstrap.jpg" alt="Bootstrap" class="gallery">
+					<img src="events/cgambling.jpg" alt="cgambling" class="gallery">
+					<img src="events/html2016.jpg" alt="html" class="gallery">
 				</div>
+
+
 			
 		</div>
 	</div>
 </div>
 
+<!-- And here is the last container -->
+
+<div class="container-fluid">
+	<div class="container section">
+		<div class="row text-center padding">
+				<div class="col-md-8">
+					<h2>Contact Us for any query</h2>
+
+					<form action="" method="POST" role="form">
+						
+						 <div class="row">
+						 	<div class="col-sm-6">
+						 		 <div class="form-group">
+						 		<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+						 		 </div>
+						 	</div>
+						 	<div class="col-sm-6">
+						 		<div class="form-group">
+						  		  <input class="form-control" id="phone" name="phone" placeholder="Phone Number" type="number" required>
+						  		</div>
+						 	</div>
+						 </div>
+						 
+						 <div class="row">
+						  	<div class="col-sm-6">
+						  		<div class="form-group">
+						 		  <input class="form-control" id="email" name="email" placeholder="Email Address" type="email" required>
+						 		</div>
+						  	</div>
+						  	<div class="col-sm-6">
+						  		<div class="form-group">
+						 		  <input class="form-control" id="subject" name="subject" placeholder="Subject" type="text" required>
+						 		</div>
+						  	</div>
+						  </div> 
+
+						 <div class="form-group">
+						 	<textarea class="form-control" name="message" id="message" rows="6"></textarea>
+						 </div>
+
+						
+					
+						<button type="submit" class="btn btn-primary btn-block">Submit</button>
+					</form>
+				</div>
+
+				<div class="col-md-4">
+				<h2>Connect via Facebook</h2>
+					
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechnoblitzkec&tabs=messages&width=300&height=310&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="300" height="310" style="border:none;overflow:hidden;display: block;margin: auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+				</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Modal Content -->
 <div class="modal fade" id="modal-id">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
