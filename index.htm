@@ -12,6 +12,9 @@
   <link rel="stylesheet" type="text/css" href="css/slick.css">
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <style type="text/css">
+  	.heading {
+  		background-color: #337ab7; color: white;
+  	}
 	div.section:hover {
 		-webkit-box-shadow: 18px 15px 125px 10px rgba(51,122,183,1);
 		-moz-box-shadow: 18px 15px 125px 10px rgba(51,122,183,1);
@@ -228,201 +231,98 @@
 </div>
 
 <!-- First Container, to be used for registration and other details reagrding it. -->
-<div class="container-fluid">
-	<div class="container text-center" style="background-color: #337ab7; color: white;">
-		<div class="container">
-			<h2>REGISTRATION</h2>
+<div class="container-fluid heading text-center">
+	<h2>REGISTRATION</h2>
+</div>
+<div class="container-fluid section">
+	<div class="row text-center padding">
+		<h2>TechnoBlitz Society Auditions</h2>
+		<div class="col-md-8"> <!-- Image for event -->
+			<img src="events/tbinterview.jpg" class="img-responsive" style="height: 500px; margin: auto;">
 		</div>
-	</div>
-	<div class="container text-center section">
-		<div class="row">
-			<!-- Upcoming -->
+		<div class="col-md-4"><!-- Details about event -->
 
-				<div class="col-md-4">
-				<h2>Upcoming Events</h2>
-					<div class="list-group"> 
-						<a href="#" class="list-group-item active"> 
-						<h4 class="list-group-item-heading">Society Auditions</h4> 
-						<p class="list-group-item-text">Wanna be a part of our society? Register yourself and prove yourself to us in the auditions!</p> </a> 
-
-						<a href="#" class="list-group-item"> 
-						<h4 class="list-group-item-heading">List group item heading</h4> 
-						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a> 
-
-						<a href="#" class="list-group-item"> 
-						<h4 class="list-group-item-heading">List group item heading</h4> 
-						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
-					</div>
-				</div>	
-
-				<!-- Registration -->
-
-				<div class="col-md-4 col-md-offset-4">
-					<h2>Register for Society Auditions</h2>
-					
-			
-						<ul class="list-group">
-						
-						<li class="list-group-item active">Want to be Part of Society?Here is your only chance to be part of the Most Amazing Society of College</li>
-						<li class="list-group-item">You Must be of 2nd Year &amp; CS / IT Branch.</li>
-						<li class="list-group-item">There Will Be 3 to 4 rounds. </li>
-						<li class="list-group-item">There are rules and laws for the members in society So, Be Serious. </li>
-						</ul>	
+				<ul class="list-group">
 				
-					<button class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-id" id="modalLauncher">Register</button>
-					<!-- <a class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-id" role="button" onclick="modalShow();">Register</a> -->
-					<br>
-				</div>	
-
-				<!-- Recent Events -->
-
-				<!-- <div class="col-md-4">
-					<h2>Recent Events</h2>
-					<div class="list-group"> 
-					<a href="events.htm" class="list-group-item">
-					 <h4 class="list-group-item-heading">Bootstrap Workshop</h4> 
-					 <p class="list-group-item-text">
-					 We taught students what responsive websites are and how they are made using the popular framework Bootstrap.	
-					 </p> </a> 
-
-					 <a href="events.htm" class="list-group-item">
-					 <h4 class="list-group-item-heading">HTML Wrokshop</h4> 
-					 <p class="list-group-item-text">
-					 Basics of HTML and web hosting were discussed. Students learned how websites are made using HTML.</p> </a>
-					<!-- <a href="#" class="list-group-item ">
-					<h4 class="list-group-item-heading">List group item heading</h4> 
-					<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>  </div>
-				</div> -->
+				<li class="list-group-item active">Want to be Part of Society?Here is your only chance to be part of the Most Amazing Society of College</li>
+				<li class="list-group-item">
+					You Must be of 2nd Year &amp; CS / IT Branch. <br>
+					There Will Be 3 to 4 rounds. <br>
+					There are rules and laws for the members in society So, Be Serious. <br>
+				</li>
+				</ul>	
+			
+			<button class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-id" id="modalLauncher">Register</button>
 		</div>
 	</div>
 </div>
 
-<!-- Second Container Fluid-->
-<!-- For Something IDK but page was so empty-->
+<!-- Gallery Container-->
+<div class="container-fluid heading text-center">
+	<h2>GALLERY</h2>
+</div>
+<div class="container-fluid section">
+	<div class="slick-slider">
+		<img src="events/bootstrap.jpg" alt="Bootstrap" class="gallery">
+		<img src="events/cgambling.jpg" alt="cgambling" class="gallery">
+		<img src="events/html2016.jpg" alt="html" class="gallery">
+	</div>
+</div>
 
-<div class="container-fluid">
-<div class="container text-center" style="background-color: #337ab7; color: white;">
+<!-- Contact Us Container-->
+<div class="container-fluid heading text-center">
+	<h2>CONTACT US</h2>
+</div>
+<div class="container-fluid section">
 	<div class="container">
-		<h2>GALLERY</h2>
-	</div>
-</div>
-	<div class="container section">
-		<div class="row text-center">
-			
-		
-				<!-- <div class="col-md-4">
-				<h2>Upcoming Events</h2>
-					<div class="list-group"> 
-						<a href="#" class="list-group-item active"> 
-						<h4 class="list-group-item-heading">Society Auditions</h4> 
-						<p class="list-group-item-text">Wanna be a part of our society? Register yourself and prove yourself to us in the auditions!</p> </a> 
+		<div class="row">
+			<div class="row text-center padding">
+					<div class="col-md-8">
+						<h2>Contact Us for any query</h2>
 
-						<a href="#" class="list-group-item"> 
-						<h4 class="list-group-item-heading">List group item heading</h4> 
-						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a> 
+						<form action="" method="POST" role="form">
+							
+							 <div class="row">
+							 	<div class="col-sm-6">
+							 		 <div class="form-group">
+							 		<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+							 		 </div>
+							 	</div>
+							 	<div class="col-sm-6">
+							 		<div class="form-group">
+							  		  <input class="form-control" id="phone" name="phone" placeholder="Phone Number" type="number" required>
+							  		</div>
+							 	</div>
+							 </div>
+							 
+							 <div class="row">
+							  	<div class="col-sm-6">
+							  		<div class="form-group">
+							 		  <input class="form-control" id="email" name="email" placeholder="Email Address" type="email" required>
+							 		</div>
+							  	</div>
+							  	<div class="col-sm-6">
+							  		<div class="form-group">
+							 		  <input class="form-control" id="subject" name="subject" placeholder="Subject" type="text" required>
+							 		</div>
+							  	</div>
+							  </div> 
 
-						<a href="#" class="list-group-item"> 
-						<h4 class="list-group-item-heading">List group item heading</h4> 
-						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
-					</div>
-				</div>	
+							 <div class="form-group">
+							 	<textarea class="form-control" name="message" id="message" rows="6"></textarea>
+							 </div>
 
-				<div class="col-md-4">
-					<h2>Follow us on Facebook</h2>
-						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechnoblitzkec&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="214" style="border:none;overflow:hidden;display: block;margin: auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				</div>
-
-				<div class="col-md-4">
-				<h2>Upcoming Events</h2>
-					<div class="list-group"> 
-						<a href="#" class="list-group-item active"> 
-						<h4 class="list-group-item-heading">Society Auditions</h4> 
-						<p class="list-group-item-text">Wanna be a part of our society? Register yourself and prove yourself to us in the auditions!</p> </a> 
-
-						<a href="#" class="list-group-item"> 
-						<h4 class="list-group-item-heading">List group item heading</h4> 
-						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a> 
-
-						<a href="#" class="list-group-item"> 
-						<h4 class="list-group-item-heading">List group item heading</h4> 
-						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
-					</div>
-				</div> -->
-
-
-				<!-- <h2>Gallery</h2> -->
-
-				<div class="slick-slider">
-					<img src="events/bootstrap.jpg" alt="Bootstrap" class="gallery">
-					<img src="events/cgambling.jpg" alt="cgambling" class="gallery">
-					<img src="events/html2016.jpg" alt="html" class="gallery">
-				</div>
-
-
-			
-		</div>
-	</div>
-</div>
-
-<!-- And here is the last container -->
-
-<div class="container-fluid">
-	<div class="container text-center" style="background-color: #337ab7; color: white;">
-		<div class="container">
-			<h2>CONTACT US</h2>
-		</div>
-	</div>
-	<div class="container section">
-		<div class="row text-center padding">
-				<div class="col-md-8">
-					<h2>Contact Us for any query</h2>
-
-					<form action="" method="POST" role="form">
+							
 						
-						 <div class="row">
-						 	<div class="col-sm-6">
-						 		 <div class="form-group">
-						 		<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-						 		 </div>
-						 	</div>
-						 	<div class="col-sm-6">
-						 		<div class="form-group">
-						  		  <input class="form-control" id="phone" name="phone" placeholder="Phone Number" type="number" required>
-						  		</div>
-						 	</div>
-						 </div>
-						 
-						 <div class="row">
-						  	<div class="col-sm-6">
-						  		<div class="form-group">
-						 		  <input class="form-control" id="email" name="email" placeholder="Email Address" type="email" required>
-						 		</div>
-						  	</div>
-						  	<div class="col-sm-6">
-						  		<div class="form-group">
-						 		  <input class="form-control" id="subject" name="subject" placeholder="Subject" type="text" required>
-						 		</div>
-						  	</div>
-						  </div> 
+							<button type="submit" class="btn btn-primary btn-block">Submit</button>
+						</form>
+					</div>
 
-						 <div class="form-group">
-						 	<textarea class="form-control" name="message" id="message" rows="6"></textarea>
-						 </div>
-
-						
-					
-						<button type="submit" class="btn btn-primary btn-block">Submit</button>
-					</form>
-				</div>
-
-				<div class="col-md-4">
-				<h2>Connect via Facebook</h2>
-					
-					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechnoblitzkec&tabs=messages&width=300&height=310&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="300" height="310" style="border:none;overflow:hidden;display: block;margin: auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-
-
-				</div>
-
+					<div class="col-md-4">
+					<h2>Connect via Facebook</h2>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechnoblitzkec&tabs=messages&width=300&height=310&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="300" height="310" style="border:none;overflow:hidden;display: block;margin: auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+			</div>
 		</div>
 	</div>
 </div>
