@@ -19,18 +19,20 @@ if(isset($_POST['phone']))
     $dbname = 'u164117485_reg';
 
 
-    $cxn = mysqli_connect($host,$user,$password,$dbname) or echo ('<div class="alert alert-danger alert-dismissible" role="alert">
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Error connecting to database.</div>'); //connection to database
+    $cxn = mysqli_connect($host,$user,$password,$dbname) or die('Could not connect'); //connection to database
 
     //checking if the username already exists
-    $query = "select roll from society_auditions where roll like '$rollno'";
+    $query = "SELECT roll FROM 'society_auditions' where roll = '$rollno'";
 
     $result = mysqli_query($cxn,$query);
+
+    echo '<div class="alert alert-danger alert-dismissible" role="alert">
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'.$result.'</div>';
     if ($result == NULL) {	//means roll number doesn't exists, and can be registered
 
-		    $query = "insert into society_auditions(id,name,roll,phone,email,section,role) values(NULL,'$name','$rollno','$pno','$mail','$sec','$role')";
-
-			if(mysqli_query($cxn,$query)){ //on successful registration
+		    $querythen = "insert into society_auditions(id,name,roll,phone,email,section,role) values(NULL,'$name','$rollno','$pno','$mail','$sec','$role')";
+		    $resultthen = mysqli_query($cxn,$querythen);
+			if($resultthen){ //on successful registration
 				echo '<div class="alert alert-info alert-dismissible" role="alert">
      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		Thank you for participating. You have been registered!
@@ -41,17 +43,18 @@ if(isset($_POST['phone']))
 				echo '<div class="alert alert-danger alert-dismissible" role="alert">
      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Error submitting data.</div>';
 			}
-			mysqli_close($cxn);
+			
 			}
 			else {
     	
     	echo '<div class="alert alert-danger alert-dismissible" role="alert">
      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
      This roll number has already been registered!</div>';
-    	
     	}
+    mysqli_close($cxn);
+
     }
 
-mysqli_close($cxn); //close the connection
+
 
 ?>

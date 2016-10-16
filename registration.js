@@ -7,7 +7,7 @@ $('#go').click(function(){
 	var sec = $('#Sec').val();
 	var role = $('#Role').val();
 	
-	$.post('reg.php',{fname:first_name, lname:last_name, phone:phone, email:email, roll:roll, sec:Sec, role:Role}, function(ret){
+	$.post('reg.php',{first_name:fname, last_name:lname, phone:phone, email:email, roll:roll, Sec:sec, Role:role}, function(ret){
 		$('#result').html(ret); //the status which is returned by php will be displayed above register submit
 	});
 });
