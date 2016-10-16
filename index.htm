@@ -15,6 +15,12 @@
   	#registerModal {
   		border: 0;
   	}
+  	@media (min-width: 768px) {
+  		#modalSizeSettings {
+  		margin-top: 53px; /*To avoid navbar overlapping*/
+		width: 800px; /*This fits better*/
+  	}
+  	}
   	.heading {
   		background-color: #337ab7; color: white;
   	}
@@ -364,7 +370,7 @@
 
 <!-- Modal Content -->
 <div class="modal fade" id="modal-id">
-	<div class="modal-dialog modal-lg">
+	<div class="modal-dialog modal-lg" id="modalSizeSettings">
 		<div class="modal-content" id="registerModal">
 			
 			<div class="modal-header">
