@@ -12,6 +12,9 @@
   <link rel="stylesheet" type="text/css" href="css/slick.css">
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <style type="text/css">
+  	#registerModal {
+  		border: 0;
+  	}
   	.heading {
   		background-color: #337ab7; color: white;
   	}
@@ -362,20 +365,22 @@
 <!-- Modal Content -->
 <div class="modal fade" id="modal-id">
 	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
+		<div class="modal-content" id="registerModal">
 			
 			<div class="modal-header">
-			    <h4 class="modal-title">Register for TechnoBlitz Interview</h4>	
+			    <h3 class="modal-title" style="display: inline;">Register for TechnoBlitz Interview</h3>	
 				<!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-				
+				<div style="display: inline; float: right;">
+				<input type="button" class="btn btn-lg btn-info" value="Register Now" onclick="location.href = 'contactus.htm';">
+				<button type="button" class="btn btn-lg btn-default closer" data-dismiss="modal">Close</button>
+				</div>
 			</div> 
 			<div class="modal-body">
 				<img src="images/registrations/TechnoBlitz_Auditions.jpg" class="img-responsive" alt="TechnoBlitz Auditions">
 			</div>
-			<div class="modal-footer">
-				 <input type="button" class="btn btn-lg btn-info" value="Register Now" onclick="location.href = 'contactus.htm';">
-				<button type="button" class="btn btn-lg btn-default closer" data-dismiss="modal">Close</button>
-			</div>
+			<!-- <div class="modal-footer">
+				
+			</div> -->
 		</div>
 	</div>
 </div>
