@@ -21,15 +21,6 @@ if(isset($_POST['phone']))
 
     $cxn = mysqli_connect($host,$user,$password,$dbname) or die('Could not connect'); //connection to database
 
-    //checking if the username already exists
-    
-    $query = mysql_query("SELECT roll FROM 'society_auditions' where roll = '$rollno'", $cxn);
-
-      $rows = mysql_num_rows($query);
-    echo '<div class="alert alert-danger alert-dismissible" role="alert">
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'.$result.'</div>';
-    if ($rows == NULL) {	//means roll number doesn't exists, and can be registered
-
 		    $querythen = "insert into society_auditions(id,name,roll,phone,email,section,role) values(NULL,'$name','$rollno','$pno','$mail','$sec','$role')";
 		    $resultthen = mysqli_query($cxn,$querythen);
 			if($resultthen){ //on successful registration
@@ -44,13 +35,8 @@ if(isset($_POST['phone']))
      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Error submitting data.</div>';
 			}
 			
-			}
-			else {
-    	
-    	echo '<div class="alert alert-danger alert-dismissible" role="alert">
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     This roll number has already been registered!</div>';
-    	}
+			
+
     mysqli_close($cxn);
 
     }
