@@ -3,21 +3,21 @@
      if (isset($_POST['email']))  {
      
      $to="technoblitz16@gmail.com";
-        $subject = "Registrations";
+        $subject = $_POST['subject'];
          $reqmail= $_POST['email'];
          $reqnm=$_POST['name'];
          $reqpno=$_POST['phone'];
-         $reqsec=$_POST['section'];
-		  $reqbr=$_POST['branch'];
-		   $reqyr=$_POST['year'];
+    //      $reqsec=$_POST['section'];
+		  // $reqbr=$_POST['branch'];
+		  //  $reqyr=$_POST['year'];
        
-         $message = 'Name : ' .$reqnm."\r\n".
-          'Contact No : ' .$reqpno."\r\n".
-          'Section : '.$reqsec."\r\n".
-		  'Branch : '.$reqbr."\r\n".
-		  'Year : '.$reqyr."\r\n";
-       
-        $headers = 'From: '.$reqmail."\r\n".
+    //      $message = 'Name : ' .$reqnm."\r\n".
+    //       'Contact No : ' .$reqpno."\r\n".
+    //       'Section : '.$reqsec."\r\n".
+		  // 'Branch : '.$reqbr."\r\n".
+		  // 'Year : '.$reqyr."\r\n";
+          $message = $_POST['message'];
+          $headers = 'From: '.$reqmail."\r\n".
  
 'Reply-To: '.$to."\r\n" .
  

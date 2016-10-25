@@ -18,7 +18,7 @@
   	@media (min-width: 768px) {
   		#modalSizeSettings {
   		margin-top: 53px; /*To avoid navbar overlapping*/
-		width: 800px; /*This fits better*/
+		width: 720px; /*This fits better*/
   	}
   	}
   	.heading {
@@ -321,8 +321,8 @@
 					<div class="col-md-8">
 						<h2>Contact Us for any query</h2>
 
-						<form action="" method="POST" role="form">
-							
+<!-- 						<form action="send.php" method="POST" role="form">
+ -->							
 							 <div class="row">
 							 	<div class="col-sm-6">
 							 		 <div class="form-group">
@@ -353,10 +353,12 @@
 							 	<textarea class="form-control" name="message" id="message" rows="6"></textarea>
 							 </div>
 
+							 <div id="status"></div>
+							
 							
 						
-							<button type="submit" class="btn btn-primary btn-block">Submit</button>
-						</form>
+							<button type="submit" class="btn btn-primary btn-block" id="mailbtn">Submit</button>
+						<!-- </form> -->
 					</div>
 
 					<div class="col-md-4">
@@ -392,11 +394,14 @@
 </div>
 
 <!-- Footer -->
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center" style="background-color: white;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4"><h3><a href="http://facebook.com/technoblitzkec" target="_blank">Techno-Blitz Society </a></h3></div>
-			<div class="col-md-4"><h3>© Krishna Engineering College</h4></div>
+			<!-- <div class="col-md-4"><h3>© Krishna Engineering College</h4></div> -->
+			<div class="col-md-4">
+				<img src="images/logo.gif" class="img-responsive">
+			</div>
 			<div class="col-md-4"><h3><small>Designed &amp; Developed by <a href="http://facebook.com/ItsAnujHere" target="_blank">Anuj Sharma</a> &amp; <a href="http://instagram.com/dillisehun" target="_blank">Satish Padnani</a></small></h3></div>
 		</div>
 	</div>
@@ -405,5 +410,7 @@
 <script type="text/javascript">
 	$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 </script>
+<script type="text/javascript" src="mail.js"></script>
+
 </body>
 </html>
